@@ -1,98 +1,436 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Karthik's Personal Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karthik VS — Business Analyst &amp; Consultant</title>
+  <meta name="description" content="Portfolio of Karthik VS — a Business Analyst and client-facing consultant who partners with organisations to solve complex problems, improve processes, and drive strategic outcomes." />
+  <meta name="theme-color" content="#06060f" />
+  <meta property="og:title" content="Karthik VS — Business Analyst" />
+  <meta property="og:description" content="Transforming complex data into clear, actionable business strategies." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-  <table>
-    <tr>
-      <td>
-        <img src="https://images.newscientist.com/wp-content/uploads/2022/07/12160337/SEI_114340789.jpg?width=300" </td>
-      <td>
-        <h1>KARTHIK VS</h1>
-        <p>
-          Student at BMS COLLEGE OF ENGINEERING
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <header id="navbar" class="navbar" role="banner">
+    <div class="container">
+      <a href="#hero" class="nav__logo" aria-label="Karthik VS — home">Karthik VS</a>
+      <nav class="nav__links" aria-label="Primary navigation">
+        <a href="#about"      class="nav__link">About</a>
+        <a href="#skills"     class="nav__link">Skills</a>
+        <a href="#projects"   class="nav__link">Projects</a>
+        <a href="#experience" class="nav__link">Experience</a>
+        <a href="#education"  class="nav__link">Education</a>
+        <a href="#contact"    class="nav__link">Contact</a>
+      </nav>
+      <a href="#contact" class="nav__cta" id="nav-hire-btn">Hire Me</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <nav class="nav__drawer" id="nav-drawer" aria-label="Mobile navigation">
+    <a href="#about"      class="nav__link">About</a>
+    <a href="#skills"     class="nav__link">Skills</a>
+    <a href="#projects"   class="nav__link">Projects</a>
+    <a href="#experience" class="nav__link">Experience</a>
+    <a href="#education"  class="nav__link">Education</a>
+    <a href="#contact"    class="nav__link">Contact</a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section id="hero" class="hero" aria-label="Introduction">
+      <div class="hero__blobs" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+      <div class="container">
+        <div class="hero__tag" aria-label="Availability status">
+          <span class="hero__tag-dot"></span>
+          Available for new opportunities
+        </div>
+        <h1 class="hero__name">
+          Hi, I'm <span class="gradient-text">Karthik VS</span>
+        </h1>
+        <p class="hero__roles">
+          I'm a <span class="typed" id="typed-text"></span><span class="hero__cursor" aria-hidden="true"></span>
         </p>
-        <p>
-          Hello everyone, welcome to my personal website.
-          I am currently pursuing my bachelor's degree in
-          Mechanical Engineering at BMS COLLEGE OF ENGINEERING.
+        <p class="hero__bio">
+          I work directly with clients every day — listening, asking the right questions, and translating what I hear into practical improvements. Part analyst, part consultant, part trusted partner.
         </p>
-    </tr>
-  </table>
+        <div class="hero__actions">
+          <a href="#projects" class="btn-primary" id="hero-view-work-btn">
+            View My Work
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn-ghost" id="hero-contact-btn">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="hero__scroll-icon"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ═══════════ ABOUT ═══════════ -->
+    <section id="about" class="section section--alt" aria-label="About me">
+      <div class="container">
+        <div class="about__grid">
+          <div class="reveal reveal--left">
+            <div class="about__avatar-wrap" data-tilt data-tilt-max="6">
+              <img src="assets/avatar.png" alt="Professional photo of Karthik VS" loading="lazy" />
+              <div class="about__avatar-badge">
+                <strong>Karthik VS</strong>
+                <span>Business Analyst</span>
+              </div>
+            </div>
+          </div>
+          <div class="reveal reveal--right">
+            <span class="section-label">About Me</span>
+            <h2 class="section-title">Consulting, <span class="gradient-text">Not Just Analysing</span></h2>
+            <p class="section-sub">
+              My day-to-day isn't just about dashboards and data — it's about conversations. I work shoulder-to-shoulder with clients, stakeholders, and cross-functional teams to understand their pain points, challenge assumptions, and recommend changes that actually stick.
+            </p>
+            <p class="section-sub" style="margin-top:16px;">
+              I gather requirements, map processes, and facilitate workshops — but above all, I build trust. Clients rely on me as a strategic partner who can take a vague problem, ask the right questions, and turn it into a clear, actionable path forward.
+            </p>
+            <div class="about__stats reveal-stagger" style="margin-top:40px;">
+              <div class="stat">
+                <div class="stat__num gradient-text" data-count="2" data-suffix="+">0+</div>
+                <div class="stat__label">Years Experience</div>
+              </div>
+              <div class="stat">
+                <div class="stat__num gradient-text" data-count="10" data-suffix="+">0+</div>
+                <div class="stat__label">Projects Delivered</div>
+              </div>
+              <div class="stat">
+                <div class="stat__num gradient-text" data-count="15" data-suffix="+">0+</div>
+                <div class="stat__label">Stakeholders Managed</div>
+              </div>
+            </div>
+            <div style="margin-top:40px;">
+              <a href="#contact" class="btn-primary" id="about-contact-btn">Let's Connect</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SKILLS ═══════════ -->
+    <section id="skills" class="section" aria-label="Skills">
+      <div class="container">
+        <div class="reveal" style="text-align:center;margin-bottom:8px;">
+          <span class="section-label">What I Bring</span>
+          <h2 class="section-title">Core <span class="gradient-text">Competencies</span></h2>
+        </div>
+        <div class="skills__grid reveal-stagger">
+
+          <div class="skill-group">
+            <div class="skill-group__icon">📊</div>
+            <div class="skill-group__name">Data &amp; Analytics</div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><strong>SQL</strong><span>Intermediate</span></div>
+              <div class="skill-bar__track"><div class="skill-bar-fill" data-pct="75"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><strong>Excel / Power Query</strong><span>Advanced</span></div>
+              <div class="skill-bar__track"><div class="skill-bar-fill" data-pct="95"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><strong>Python (Pandas)</strong><span>Intermediate</span></div>
+              <div class="skill-bar__track"><div class="skill-bar-fill" data-pct="75"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__icon">🎯</div>
+            <div class="skill-group__name">Consulting &amp; Delivery</div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><strong>Stakeholder Interviews</strong><span>Advanced</span></div>
+              <div class="skill-bar__track"><div class="skill-bar-fill" data-pct="92"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><strong>Workshop Facilitation</strong><span>Proficient</span></div>
+              <div class="skill-bar__track"><div class="skill-bar-fill" data-pct="88"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><strong>BRD / User Story Writing</strong><span>Advanced</span></div>
+              <div class="skill-bar__track"><div class="skill-bar-fill" data-pct="90"></div></div>
+            </div>
+          </div>
 
 
+          <div class="skill-group">
+            <div class="skill-group__icon">🗺️</div>
+            <div class="skill-group__name">Business Analysis</div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><strong>Requirements Gathering</strong><span>Advanced</span></div>
+              <div class="skill-bar__track"><div class="skill-bar-fill" data-pct="95"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><strong>Process Mapping (BPMN)</strong><span>Proficient</span></div>
+              <div class="skill-bar__track"><div class="skill-bar-fill" data-pct="88"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><strong>Gap &amp; Root Cause Analysis</strong><span>Proficient</span></div>
+              <div class="skill-bar__track"><div class="skill-bar-fill" data-pct="85"></div></div>
+            </div>
+          </div>
 
+          <div class="skill-group">
+            <div class="skill-group__icon">🤝</div>
+            <div class="skill-group__name">Collaboration &amp; Tools</div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><strong>JIRA / Confluence</strong><span>Proficient</span></div>
+              <div class="skill-bar__track"><div class="skill-bar-fill" data-pct="88"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><strong>Stakeholder Management</strong><span>Advanced</span></div>
+              <div class="skill-bar__track"><div class="skill-bar-fill" data-pct="90"></div></div>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-bar__label"><strong>Agile / Scrum</strong><span>Intermediate</span></div>
+              <div class="skill-bar__track"><div class="skill-bar-fill" data-pct="82"></div></div>
+            </div>
+          </div>
 
+        </div>
+      </div>
+    </section>
 
-  <hr size="3" />
-  <h3>EDUCATION </h3>
-  <ul>
-    <li>Completed my schooling from Jyothy Kendriya Vidyalaya</li>
-    <li>Completed my higher education from Sadhana PU College </li>
-    <li>Currently pursuing my BE in Mechanical Engineering from BMS COLLEGE OF ENGINEERING</li>
-  </ul>
-  <hr size="3"/>
-  <h3>WORK EXPERIENCE</h3>
-  <table cellspacing="10">
-    <thead>
-      <tr>
-        <th> DATES</th>
-        <th>WORK</th>
-      </tr>
-    </thead>
-    <tr>
-      <td>
-        2015-2017
-      </td>
-      <td>
-        Lead Developer at APPLE INC.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        2018-2020
-      </td>
-      <td>
-        CEO at APPLE INC.
-      </td>
+    <!-- ═══════════ PROJECTS ═══════════ -->
+    <section id="projects" class="section section--alt" aria-label="Projects">
+      <div class="container">
+        <div class="reveal" style="text-align:center;">
+          <span class="section-label">Selected Work</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-sub" style="margin:0 auto 52px;">A curated selection of analytical and strategic projects that delivered measurable impact.</p>
+        </div>
+        <div class="projects__grid reveal-stagger">
 
-    </tr>
-  </table>
-  <br />
-  <hr size="3"/>
-  <h3>Skills</h3>
-  <table cellspacing="10">
-    <tr>
-      <td>Web Developer  </td>
-      <td>
-        😂
-      </td>
-    </tr>
-    <tr>
-      <td>andriod Developer  </td>
-      <td>
-        😂  😂  😂
-      </td>
-    </tr>
-    <tr>
-      <td>Riding  </td>
-      <td>
-        👌👌👌
-      </td>
-    </tr>
-  </table>
+          <article class="project-card" data-tilt data-tilt-max="5">
+            <div class="project-card__num">01</div>
+            <h3 class="project-card__title">Enterprise Procurement Workflow Optimization</h3>
+            <p class="project-card__desc">Configured scalable workflow solutions and API-based integrations for global clients (including Meta and Unilever), standardizing operations across procurement functions.</p>
+            <div class="project-card__tags">
+              <span class="tag">Workflow Design</span><span class="tag">API Integration</span><span class="tag">BPMN</span><span class="tag">Stakeholder Mgmt</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-link" id="proj1-case-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Case Study
+              </a>
+            </div>
+          </article>
 
-  <hr size="3" />
+          <article class="project-card" data-tilt data-tilt-max="5">
+            <div class="project-card__num">02</div>
+            <h3 class="project-card__title">Automated Reporting &amp; Governance Dashboard</h3>
+            <p class="project-card__desc">Designed and implemented automated reporting solutions using Excel and Power BI for multi-country transformation initiatives, effectively reducing manual reporting effort by 40%.</p>
+            <div class="project-card__tags">
+              <span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">Data Analysis</span><span class="tag">Process Optimization</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-link" id="proj2-case-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Case Study
+              </a>
+            </div>
+          </article>
 
-  <a href="Hobbies.html">My Hobbies</a>
-  <br />
-  <a href="contact me.html">Contact Me</a>
+          <article class="project-card" data-tilt data-tilt-max="5">
+            <div class="project-card__num">03</div>
+            <h3 class="project-card__title">UAT &amp; Release Quality Improvement</h3>
+            <p class="project-card__desc">Led UAT planning and execution for enterprise-scale deployments, managing defect triage and root cause analysis to reduce post-deployment defects by 30%.</p>
+            <div class="project-card__tags">
+              <span class="tag">UAT</span><span class="tag">Root Cause Analysis</span><span class="tag">Agile</span><span class="tag">Defect Triage</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" class="project-link" id="proj3-case-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Case Study
+              </a>
+            </div>
+          </article>
 
+        </div>
+      </div>
+    </section>
 
+    <!-- ═══════════ EXPERIENCE ═══════════ -->
+    <section id="experience" class="section" aria-label="Work experience">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">Career</span>
+          <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+        </div>
+        <div class="timeline reveal">
 
+          <div class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__date">Dec 2025 — Present</div>
+            <div class="timeline__role">Business Analyst</div>
+            <div class="timeline__company">Aerchain · Bengaluru, KA</div>
+            <ul class="timeline__bullets">
+              <li>Analyzed existing business processes to identify inefficiencies, bottlenecks, and opportunities for workflow optimization across procurement and operations.</li>
+              <li>Designed and configured scalable workflow solutions with reusable architecture, enabling faster implementation across multiple enterprise use cases.</li>
+              <li>Led UAT planning and execution in collaboration with cross-functional stakeholders, reducing post-deployment defects by 30% and improving release quality.</li>
+              <li>Supporting implementation of modules by configuring workflows, validating business rules, and coordinating UAT cycles.</li>
+              <li>Worked closely with technical teams to enable API-based integrations, reducing manual intervention in key workflows.</li>
+              <li>Supporting production deployments by conducting root cause analysis, managing defect triage, and coordinating fixes with engineering teams.</li>
+              <li>Contributed to enterprise-scale implementations for global clients including Meta, Unilever and Emirates Global Aluminium supporting workflow standardization and deployment across procurement functions.</li>
+            </ul>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__date">July 2024 — Jun 2025</div>
+            <div class="timeline__role">Lean Consultant</div>
+            <div class="timeline__company">Gemba Concepts · Bengaluru, KA</div>
+            <ul class="timeline__bullets">
+              <li>Analyzed operational workflows across functions to identify process inefficiencies and improvement opportunities.</li>
+              <li>Designed and implemented automated reporting solutions using Excel and Power BI, reducing manual effort by 40%.</li>
+              <li>Developed process maps, SOPs, and standard templates to improve consistency across multi-country operations.</li>
+              <li>Delivered analytical presentations supporting multi-country transformation initiatives across India and Africa.</li>
+              <li>Supported data council reviews by preparing governance audit reports and root-cause analyses, influencing key process standardization initiatives.</li>
+              <li>Collaborated closely with plant heads, business leaders, and CXO-level stakeholders to align KPIs, governance cadence, and strategic priorities.</li>
+              <li>Performed secondary research benchmarking production KPIs against industry peers to support strategic recommendations.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ EDUCATION ═══════════ -->
+    <section id="education" class="section section--alt" aria-label="Education">
+      <div class="container">
+        <div class="reveal" style="text-align:center;">
+          <span class="section-label">Academic Background</span>
+          <h2 class="section-title">Education &amp; <span class="gradient-text">Certifications</span></h2>
+        </div>
+        <div class="education__grid reveal-stagger">
+
+          <div class="edu-card">
+            <div class="edu-card__icon">🎓</div>
+            <div class="edu-card__degree">BE in Mechanical Engineering</div>
+            <div class="edu-card__school">B.M.S College of Engineering</div>
+            <div class="edu-card__year">Nov 2020 – May 2024</div>
+            <div class="edu-card__year">GPA: 8.77/10</div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card__icon">📜</div>
+            <div class="edu-card__degree">12th grade in PCME</div>
+            <div class="edu-card__school">Sadhana PU College</div>
+            <div class="edu-card__year">May 2018 – Apr 2020</div>
+            <div class="edu-card__year">Percentage: 93%</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section id="contact" class="section" aria-label="Contact">
+      <div class="container">
+        <div class="reveal" style="text-align:center;">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title">Let's <span class="gradient-text">Work Together</span></h2>
+          <p class="section-sub" style="margin:0 auto;">Have a project in mind or just want to connect? I'd love to hear from you.</p>
+        </div>
+        <div class="contact__wrapper">
+
+          <div class="contact__info reveal reveal--left">
+            <a href="mailto:kshendige@gmail.com" class="contact__link-row" id="email-link">
+              <span class="contact__link-icon">✉️</span>
+              <div>
+                <div class="contact__link-label">Email</div>
+                <div class="contact__link-val">kshendige@gmail.com</div>
+              </div>
+            </a>
+            <a href="tel:+916363918528" class="contact__link-row" id="phone-link">
+              <span class="contact__link-icon">📞</span>
+              <div>
+                <div class="contact__link-label">Phone</div>
+                <div class="contact__link-val">+91 63639 18528</div>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/karthikvs2002/" target="_blank" rel="noopener noreferrer" class="contact__link-row" id="linkedin-link">
+              <span class="contact__link-icon">💼</span>
+              <div>
+                <div class="contact__link-label">LinkedIn</div>
+                <div class="contact__link-val">linkedin.com/in/karthikvs2002</div>
+              </div>
+            </a>
+            <button class="btn-ghost" id="copy-email" style="width:fit-content;">
+              📋 Copy Email Address
+            </button>
+          </div>
+
+          <form class="contact__form reveal reveal--right" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name">Name *</label>
+                <input type="text" id="f-name" name="name" placeholder="Your name" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="f-email">Email *</label>
+                <input type="email" id="f-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="f-subject">Subject</label>
+              <input type="text" id="f-subject" name="subject" placeholder="What's this about?" />
+            </div>
+            <div class="form-group">
+              <label for="f-message">Message *</label>
+              <textarea id="f-message" name="message" placeholder="Tell me about your project or idea…" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" id="contact-submit-btn" style="width:fit-content;">
+              Send Message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <span class="nav__logo">Karthik VS</span>
+        <div class="footer__socials">
+          <a href="https://linkedin.com/in/karthikvs2002/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn" id="footer-linkedin">💼</a>
+          <a href="tel:+916363918528"                                               class="social-btn" aria-label="Phone"    id="footer-phone">📞</a>
+          <a href="mailto:kshendige@gmail.com"                                               class="social-btn" aria-label="Email"    id="footer-email">✉️</a>
+        </div>
+        <a href="#hero" class="back-to-top" id="back-to-top-btn">
+          ↑ Back to top
+        </a>
+      </div>
+      <p>© 2025 Karthik VS · Built with passion &amp; precision.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
-
 </html>
